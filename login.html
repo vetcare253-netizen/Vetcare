@@ -4,236 +4,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | VetCare</title>
+    <title>Vet Care - Iniciar sesión</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-        * {
+        body {
+            background-color: #eef4f9;
+            min-height: 100vh;
             margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
             font-family: Arial, sans-serif;
         }
 
-        body {
-            min-height: 100vh;
+        .linea-superior {
+            height: 8px;
+            background-color: #0b3552;
+        }
+
+        .contenedor {
+            flex: 1;
             display: flex;
             justify-content: center;
             align-items: center;
-            background: #eaf5f2;
+            padding: 30px 15px;
         }
 
-        .container {
-            display: flex;
-            width: 850px;
-            max-width: 95%;
-            min-height: 500px;
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 35px rgba(0,0,0,0.12);
-        }
-
-        .left {
-            width: 50%;
-            background: #168b78;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        .login {
+            background-color: white;
+            width: 100%;
+            max-width: 420px;
             padding: 35px;
-            text-align: center;
+            border-radius: 18px;
+            border: 1px solid #d8e4ed;
+            box-shadow: 0 8px 25px #0b35521a;
         }
 
-        .left h1 {
-            font-size: 36px;
-            margin-bottom: 15px;
-        }
-
-        .left p {
-            line-height: 1.6;
-        }
-
-        .animal {
-            font-size: 100px;
-            margin-bottom: 20px;
-        }
-
-        .right {
-            width: 50%;
-            padding: 55px 40px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .right h2 {
-            color: #168b78;
-            margin-bottom: 10px;
-            font-size: 28px;
-        }
-
-        .subtitle {
-            color: #777;
-            margin-bottom: 30px;
-        }
-
-        label {
+        .logo {
+            width: 150px;
+            max-width: 100%;
             display: block;
-            margin-bottom: 8px;
-            color: #444;
+            margin: 0 auto 15px;
+        }
+
+        h2 {
+            color: #0b3552;
             font-weight: bold;
         }
 
-        input {
-            width: 100%;
-            padding: 13px;
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            outline: none;
-            font-size: 15px;
+        .linea {
+            width: 80px;
+            height: 4px;
+            background-color: #119e91;
+            border-radius: 10px;
+            margin: 15px auto 25px;
         }
 
-        input:focus {
-            border-color: #168b78;
+        .form-label {
+            color: #0b3552;
+            font-weight: 500;
         }
 
-        .forgot {
-            display: block;
-            text-align: right;
-            color: #168b78;
+        .form-control {
+            border-radius: 10px;
+            padding: 11px;
+        }
+
+        .form-control:focus {
+            border-color: #119e91;
+            box-shadow: 0 0 0 3px #119e9120;
+        }
+
+        .btn-primary {
+            background-color: #0b3552;
+            border-color: #0b3552;
+            border-radius: 10px;
+            padding: 12px;
+        }
+
+        .btn-primary:hover {
+            background-color: #119e91;
+            border-color: #119e91;
+        }
+
+        .form-check-input:checked {
+            background-color: #119e91;
+            border-color: #119e91;
+        }
+
+        a {
+            color: #0b3552;
             text-decoration: none;
-            font-size: 13px;
-            margin-top: -10px;
-            margin-bottom: 20px;
         }
 
-        button {
-            width: 100%;
-            padding: 14px;
-            background: #168b78;
-            border: none;
-            border-radius: 8px;
+        a:hover {
+            color: #119e91;
+            text-decoration: underline;
+        }
+
+        .banner {
+            background-color: #0b3552;
             color: white;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background: #106d5e;
-        }
-
-        .register {
             text-align: center;
-            margin-top: 25px;
-            font-size: 14px;
-            color: #777;
+            padding: 18px 12px;
+            border-top: 5px solid #119e91;
         }
 
-        .register a {
-            color: #168b78;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        @media (max-width: 650px) {
-            .container {
-                flex-direction: column;
-            }
-
-            .left, .right {
-                width: 100%;
-            }
-
-            .left {
-                min-height: 200px;
-            }
-
-            .animal {
-                font-size: 55px;
-                margin-bottom: 10px;
-            }
-
-            .left h1 {
-                font-size: 28px;
-            }
-
-            .right {
-                padding: 35px 25px;
-            }
+        .banner p {
+            margin: 0;
+            font-size: 13px;
+            letter-spacing: 1px;
         }
     </style>
 </head>
 
 <body>
 
-    <div class="container">
+    <div class="linea-superior"></div>
 
-        <div class="left">
-            <div class="animal">🐶 🐱</div>
-            <h1>VetCare</h1>
-            <p>
-                Cuidamos de quienes hacen
-                nuestros días más felices.
-                Bienvenido a nuestra
-                plataforma veterinaria.
-            </p>
-        </div>
+    <div class="contenedor">
+        <div class="login">
 
-        <div class="right">
-
-            <h2>¡Bienvenido!</h2>
-            <p class="subtitle">
-                Ingresa a tu cuenta de VetCare
-            </p>
+            <div class="text-center">
+                <img src="logo-vetcare.png" alt="Logo Vet Care" class="logo">
+                <h2>Bienvenido a Vet Care</h2>
+                <p class="text-muted">Inicia sesión en tu cuenta</p>
+                <div class="linea"></div>
+            </div>
 
             <form id="loginForm">
+                <div class="mb-3">
+                    <label for="correo" class="form-label">Correo electrónico</label>
+                    <input type="email" id="correo" class="form-control"
+                           placeholder="Ingresa tu correo" required>
+                </div>
 
-                <label for="email">Correo electrónico</label>
-                <input
-                    type="email"
-                    id="email"
-                    placeholder="Ingresa tu correo"
-                    required
-                >
+                <div class="mb-3">
+                    <label for="password" class="form-label">Contraseña</label>
+                    <input type="password" id="password" class="form-control"
+                           placeholder="Ingresa tu contraseña" required>
+                </div>
 
-                <label for="password">Contraseña</label>
-                <input
-                    type="password"
-                    id="password"
-                    placeholder="Ingresa tu contraseña"
-                    required
-                >
+                <div class="form-check mb-3">
+                    <input type="checkbox" id="mostrar" class="form-check-input">
+                    <label for="mostrar" class="form-check-label">
+                        Mostrar contraseña
+                    </label>
+                </div>
 
-                <a href="#" class="forgot">
-                    ¿Olvidaste tu contraseña?
-                </a>
-
-                <button type="submit">
+                <button type="submit" class="btn btn-primary w-100">
                     Iniciar sesión
                 </button>
 
+                <p id="mensaje" class="text-center mt-3" aria-live="polite"></p>
             </form>
 
-            <p class="register">
-                ¿No tienes cuenta?
-                <a href="#">Regístrate aquí</a>
-            </p>
-
+            <div class="text-center mt-3">
+                <a href="./recuperar.html">¿Olvidaste tu contraseña?</a>
+                <p class="mt-3">
+                    ¿No tienes cuenta?
+                    <a href="./registrar.html">Regístrate</a>
+                </p>
+            </div>
         </div>
-
     </div>
 
+    <footer class="banner">
+        <p>VET CARE | BASE DE DATOS DE MASCOTAS Y CITAS</p>
+    </footer>
+
     <script>
-        document.getElementById("loginForm")
-        .addEventListener("submit", function(event) {
+        const formulario = document.getElementById("loginForm");
+        const password = document.getElementById("password");
+        const mostrar = document.getElementById("mostrar");
+        const mensaje = document.getElementById("mensaje");
 
-            event.preventDefault();
+        mostrar.addEventListener("change", function() {
+            password.type = mostrar.checked ? "text" : "password";
+        });
 
-            alert("Diseño de login listo. Falta conectar la autenticación.");
+        formulario.addEventListener("submit", function(evento) {
+            evento.preventDefault();
 
+            let correo = document.getElementById("correo").value.trim().toLowerCase();
+            let clave = password.value;
+            let usuarios = JSON.parse(localStorage.getItem("usuariosVetCare") || "[]");
+
+            let usuario = usuarios.find(function(usuario) {
+                return usuario.correo === correo && usuario.clave === clave;
+            });
+
+            if (usuario) {
+                mensaje.textContent = "Bienvenido, " + usuario.nombre;
+                mensaje.className = "text-success text-center mt-3";
+            } else {
+                mensaje.textContent = "Correo o contraseña incorrectos";
+                mensaje.className = "text-danger text-center mt-3";
+            }
         });
     </script>
 
