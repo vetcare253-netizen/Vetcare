@@ -1,0 +1,23 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+h1{
+    background-color: #223a5e;
+}
+.menu{
+    background-color: #223a5e;
+    width: 300px;
+    height: 800px;
+    margin-top: 10px;
+}
+a{
+    text-decoration: none;
+    color: #f3f8fd;
+    background-color: #355982;
+    font-size: 30px;
+}
