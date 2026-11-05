@@ -95,3 +95,34 @@ h3{
     background-color: #223a5e;
 
 }
+
+.buscador {
+    position: absolute;
+    margin-left: 800px;
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    padding: 10px 15px;
+    max-width: 400px;
+}
+
+.inputbuscador {
+    border: none;
+    background: transparent;
+    outline: none;
+    flex: 1;
+    font-size: 15px;
+    color: #333;
+}
+
+
+.botonbuscador {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding-left: 10px;
+}
+.header1{
+    background-color: #305e22;
+}
