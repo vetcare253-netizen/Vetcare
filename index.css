@@ -97,13 +97,13 @@ h3{
 }
 
 .buscador {
-    position: absolute;
     margin-left: 800px;
     background-color: #f8f9fa;
     border: 1px solid #ced4da;
-    border-radius: 8px;
+    border-radius: 20px;
     padding: 10px 15px;
     max-width: 400px;
+
 }
 
 .inputbuscador {
@@ -124,5 +124,6 @@ h3{
     padding-left: 10px;
 }
 .header1{
-    background-color: #305e22;
+    background-color: #355982;
+    height: 100PX;
 }
